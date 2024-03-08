@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises and Asyncs await in Js</title>
+  </head>
+  <body>
+    <h2>Promises  and Async await in Js</h2>
+
+    <h3>
+
+    </h3>
+
+    <script>
+      //Promises
+
+      // promises ko ham hamesa ak errow function ma likhty hain or isky parameter ma ham resolve or reject value dyty hain
+      //promises kay kisi parneter ko ham "then","catch"or "fullfiled" sa call karty hain
+
+      // simple sentax
+
+      // const a = new Promise((resolve,reject)=>{
+
+      //     resolve("the data has been fetched");
+      //     reject("some technical errors");
+
+      // })
+      // a.then((message)=>{
+      // console.log(message);
+      // })
+      // .catch((error)=>{
+      //     console.log(error);
+      // })
+
+      //=============================================================
+
+      //example one
+
+      // const z = new Promise((resolve,reject)=>{
+
+      // const success = true;
+
+      // if(success){
+      //     resolve("the success has been true");
+
+      // }else{
+      //     reject("some errors");
+
+      // }
+
+      // //----------------------------------------------------------
+
+      // // if else ko ham asa bh likh skty hian:
+      // // if(success) resolve("data has been fetched");
+      // // else reject("some errors");
+
+      // //----------------------------------------------------------
+
+      // })
+
+      // z.then((message)=>{
+      //     console.log(message);
+      // }).catch((error)=>{
+      //     console.log(error);
+
+      // })
+
+      //================================================
+
+      //Example two
+
+      // const arr = [];
+
+      // const fetchData = () => {
+      //   return new Promise((resolve, reject) => {
+      //     setTimeout(() => {
+      //       arr.push({
+      //         name: "kashif",
+      //       });
+      //       if (arr.length > 0) resolve("object agya ha ");
+      //       else reject("object nhi aya koi masla hwa ha");
+      //     }, 2000);
+      //   });
+      // };
+
+      // fetchData(arr)
+      //   .then((message) => {
+      //     console.log(message);
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //   });
+
+        //is example ma hamny simple yah kia haka ham na ak empty array bnayah ha or is array ma hamny promisses ka zariya ak objct bhja ha
+        //hamny simple ak arrow function bnaya "fetchdata" or uska under ak "promise" return karwaya ha
+        //then hamny ak settimeout lagaya ka har 2 sec ka bad yah chly or 2 sec ka bar arr ka andar push ho jay hamara object jo ham push karwana cahty hain
+        //then hamny if else condition ka use kia haka agar length yah ha to resolve chl jay jasa ka ham simple promises ma resolve or reject ka use karty hi hain
+        //phr hamny simple functio ko call kia or Jasa ka promise ma ham resolve ko dekhany ka liya "then" or error ko dekhany ka liya "catch" ka use karty hian wo kia.
+
+//========================================================================================================================================================================================
+
+                     // Async & await
+
+                      //asyncs ko ham is liya use karty hain taky code kam likhna pary or yah bht acha mean readable code lagta ha, zyada issue nhi hota ismy hamy kam karny ma
+        //or ismy or promises ma ham easily error handling kar skty hian "try/ catch " method sa.
+        //async ko ha ham kisi bh function ssa phly lagaty hain, is sa wo function already promise return kar dyta ha hamy mazeed likhny ki zarrat nh parti .
+        //or agar phr bh hamy promises ka methods jasy ka "then,catch,finally" ko use karna hota hato ham simnpel usey use kar skty hain, "await " lga kar.
+        //await ko ham tabhi use kar skty hain jab hamny "async" ko use kiya ho function ma.
+        //is example ma ham simply dekhy gay ka async await sa ham kasy api call kar skty hain jo ka ak easy tareeka ha.
+        //fetch thora lamba tareeka ha, q k wha hamy promise return karna parta ha
+       
+        const url = "https://official-joke-api.appspot.com/random_joke";
+        const h3 = document.querySelector("h3");
+
+
+const fetchData = async ()=>{
+
+  const response = await fetch(url);
+   
+const data = response.json();
+
+ h3.innerText = data.setup;
+
+}
+fetchData()
+.catch((e)=>{
+  console.log(e);
+});
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,94 @@
+                     Callback, Promises & Async/await
+
+
+Bilkul! Main aapko JavaScript mein callback functions, promises, aur async/await ke baare mein step-by-step guide karunga, Roman Urdu mein.
+
+### 1. Callback Functions (کال بیک فنکشن)
+
+Callback functions woh functions hote hain jo dusre functions ke arguments ke tor par diye jaate hain aur baad mein execute kiye jaate hain, aksar kisi asynchronous operation ke poore hone ke baad. Ye JavaScript mein ek mool bhag hote hain, khaaskar asynchronous programming mein.
+
+**Misal:**
+
+```javascript
+function fetchData(callback) {
+    setTimeout(() => {
+        const data = "Kuch data";
+        callback(data);
+    }, 1000);
+}
+
+function processData(data) {
+    console.log("Data ko process kar rahe hain:", data);
+}
+
+fetchData(processData);
+```
+
+Is misal mein, `fetchData` ek function hai jo asynchronous taur par data fetch karne ka kaam karta hai. Ye ek callback function (`processData`) ko argument ke tor par le leta hai. Jab data uplabdh ho jaata hai, ye callback function ko fetch kiya gaya data ke saath call karta hai.
+
+### 2. Promises (پرامسز)
+
+Promises woh objects hote hain jo ek asynchronous operation ke poore hone ya fail hone ki sambhavna ko represent karte hain, aur uska nateeja. Ye callback functions se saaf aur shaktishaali tareeke se asynchronous operations ko handle karne ka ek accha tareeka pradaan karte hain.
+
+**Misal:**
+
+```javascript
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const data = "Kuch data";
+            resolve(data);
+        }, 1000);
+    });
+}
+
+fetchData()
+    .then(data => {
+        console.log("Data:", data);
+    })
+    .catch(error => {
+        console.error("Ghalti:", error);
+    });
+```
+
+Is misal mein, `fetchData` ek Promise return karta hai. Jab asynchronous operation saflta se poora hota hai, ye `resolve` ke saath data ko call karta hai. Aap `.then()` ka istemaal kiye binaaye huye data ko handle kar sakte hain aur `.catch()` se ghaltiyan ko handle kar sakte hain.
+
+### 3. Async/Await (اسنک/اویٹ)
+
+Async/Await ek naya JavaScript feature hai jo aapko asynchronous code ko synchronous tarah se likhne ki anumati deta hai. Ye Promises par aadhaarit hai aur asynchronous operations ko handle karne ke liye ek adhik saral syntax pradaan karta hai.
+
+**Misal:**
+
+```javascript
+function fetchData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const data = "Kuch data";
+            resolve(data);
+        }, 1000);
+    });
+}
+
+async function fetchDataAsync() {
+    try {
+        const data = await fetchData();
+        console.log("Data:", data);
+    } catch (error) {
+        console.error("Ghalti:", error);
+    }
+}
+
+fetchDataAsync();
+```
+
+Is misal mein, `fetchDataAsync` ek asynchronous function hai jise `async` shabd ke saath nirdharit kiya gaya hai. Is function ke andar, aap `await` shabd ka upyog ek Promise ka resolution ka wait karne ke liye kar sakte hain. Ye asynchronous code ko synchronous dikhne mein madad karta hai aur samajhne mein aasan banaata hai.
+
+### Callbacks, Promises, aur Async/Await ka Upyog
+
+- **Callback Functions**: Paramparagat taur par asynchronous operations ko handle karne ke liye prayukt hota hai, lekin ye callback hell aur kum padhne yogy code ka kaaran ban sakta hai. Aajkal bhi vyapak roop se prayukt hota hai, vishesh roop se purane codebase mein ya sthitiyon mein jahan Promises ya async/await uplabdh nahin hain.
+
+- **Promises**: Promises ko JavaScript mein asynchronous operations ko handle karne ke liye standard mana gaya hai, jo callback functions se behtar error handling aur chaining pradaan karta hai. Promises aajkal modern JavaScript mein vyapak roop se prayukt hote hain, vishesh roop se library aur frameworks mein.
+
+- **Async/Await**: Promises ke ek saaf aur naye vikalp ke roop mein prastut hua, async/await asynchronous code ko likhne ka ek saaf aur sukhad tareeka pradaan karta hai, vishesh roop se we developers ke liye jo syncronous programming se aaye hain. Ye lagataar JavaScript mein asynchronous operations ko handle karne ka pasandeeda tareeka ban raha hai.
+
+In concepts ko samajhna mahatvapurna hai kyunki ye JavaScript mein effective asynchronous code likhne ke liye moolbhut hai. Inka prayog karte hue prashikshan prapt karein taaki inka antarikta aur prayog ki upayogita ko samajh sakein.

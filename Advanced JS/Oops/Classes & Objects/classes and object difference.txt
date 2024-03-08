@@ -1,0 +1,39 @@
+JavaScript mein, classes aur objects dono programming concepts hain jo ke programming languages mein commonly use hoti hain, lekin in dono mein kuch farq hota hai.
+
+1. **Objects**:
+   - Objects JavaScript ka data type hain jo key-value pairs se bana hota hai.
+   - Har object ek reference data type hota hai, matlab har ek object ek unique memory location ko point karta hai.
+   - Objects ke properties dynamic hote hain, matlab aap unhe dynamically add, update aur delete kar sakte hain.
+   - Example:
+     ```javascript
+     const person = {
+         name: "John",
+         age: 30,
+         city: "New York"
+     };
+     ```
+
+2. **Classes**:
+   - Classes ek blueprint hote hain jo ke objects create karne ke liye use hota hai.
+   - Classes JavaScript mein ES6 (ECMAScript 2015) ke sath introduce kiye gaye hain.
+   - Classes define karne ke liye `class` keyword ka istemal hota hai.
+   - Ek class mein properties aur methods hote hain jo objects ke instances banate waqt inherit hote hain.
+   - Example:
+     ```javascript
+     class Person {
+         constructor(name, age, city) {
+             this.name = name;
+             this.age = age;
+             this.city = city;
+         }
+     }
+     const person1 = new Person("John", 30, "New York");
+     ```
+
+3. **Farq**:
+   - Ek farq yeh hai ke objects directly create kiye ja sakte hain, jabki classes ko pehle define karna padta hai.
+   - Objects ke liye prototype-based inheritance hoti hai, jabki classes ke liye class-based inheritance hoti hai.
+   - Classes encapsulation ko encourage karte hain, jabki objects open structure rakhte hain.
+   - Classes ke saath aksar constructor function hoti hai jo object ko initialize karti hai, jabki objects directly properties aur values ke sath declare kiye ja sakte hain.
+
+In summary, classes ek blueprint provide karte hain objects ke liye, jabki objects actual data ko represent karte hain aur dynamic nature ke sath ata hain. Classes inheritance, encapsulation, aur code organization ke liye use hoti hain, jabki objects data storage aur manipulation ke liye use hote hain.

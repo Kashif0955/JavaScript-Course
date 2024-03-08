@@ -1,0 +1,9 @@
+         Difference between Ajax and Fetch Api
+
+Ajax aur Fetch API dono web development mein network requests ko manage karne ke liye use hone wale techniques hain, lekin yeh dono alag-alag hain.
+
+1. **Ajax (Asynchronous JavaScript and XML)**: Ajax ek older technique hai jo web pages mein data ko asynchronously load karne ke liye use hoti hai. Isme typically XMLHttpRequest (XHR) object ka istemal hota hai jo server se data ko retrieve karne aur page ko update karne ke liye hota hai. Ajax se pehle, web pages ko refresh karke server se data ko retrieve karna padta tha, lekin Ajax ke aane ke baad, data ko retrieve karne ke liye page ko refresh karne ki zarurat nahi hoti.
+
+2. **Fetch API**: Fetch API modern web browsers mein available hai aur XMLHttpRequest (XHR) ko replace karne ke liye design ki gayi hai. Ye ek Promise-based interface provide karta hai jisse developers ko network requests ko handle karne mein madad milti hai. Fetch API se data ko retrieve karne ke liye `fetch()` function ka istemal hota hai.
+
+Dono techniques ka use kisi bhi web development project mein kiya ja sakta hai, lekin Fetch API modern standards ke mutabiq hai aur XMLHttpRequest ke mukable mein zyada powerful aur flexible hai.

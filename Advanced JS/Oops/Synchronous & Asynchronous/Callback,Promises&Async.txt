@@ -1,0 +1,79 @@
+         "Callback, Promises & Async/await"
+
+Callback Functions:
+
+Soch lein aap ek dukaan chalate hain aur ek customer aapko samosa dene ke liye batata deta hai. Aap samosa bana rahe hain lekin aapko chutney bhi banana hai. Aap customer ko bolte hain, "Theek hai, samosa banata hoon, chutney banne ke baad aapko batata deta hoon." Jab chutney aur samosa dono tayyar ho jaate hain, to aap customer ko bula lete hain aur samosa aur chutney de dete hain.
+
+Yahi callback function ka concept hai. Aap ek function ko batata dete hain ki doosra function kabhi khatam ho jaaye to woh kya kare (chutney banana). doosra function apna kaam karke pehle function ko bata deta hai (chutney bana kar batata deta hai).
+
+Example:
+
+JavaScript
+function makeTea(callback) {
+  console.log("Making tea...");
+  setTimeout(() => {
+    console.log("Tea is ready!");
+    callback(null, "Enjoy your tea!");
+  }, 2000); // Simulate making tea (2 seconds)
+}
+
+function makeToast(teaMessage) {
+  console.log("Making toast...");
+  setTimeout(() => {
+    console.log("Toast is ready!");
+    console.log(teaMessage);
+  }, 1000); // Simulate making toast (1 second)
+}
+
+makeTea(makeToast); // Call makeTea and pass makeToast as the callback
+Use code with caution.
+Promises:
+
+Ab soch lein aap doosri dukaan se samosa lene ja rahe hain. Dukaan waala aapse yeh waada karta hai ("promise") ki woh 5 minute mein samosa de dega. Aap dukaan ke bahar wait karte hain (promise ka wait karna). 5 minute baad, dukaan waala aapko samosa de deta hai ("promise resolve") ya fir kuch wajah se samosa nahi de पाता ("promise reject").
+
+Yahi promise ka concept hai. Aap ek function se yeh waada mangte hain ki woh aage kuch karne ke baad aapko batayega (samose ka wait karna). woh function ya toh apko woh cheez de deta hai ("resolve") ya fir yeh bata deta hai ki woh cheez nahi de sakta ("reject").
+
+Example:
+
+JavaScript
+function buySamosa() {
+  return new Promise((resolve, reject) => {
+    console.log("Going to samosa shop...");
+    setTimeout(() => {
+      if (Math.random() > 0.5) {
+        console.log("Samosas are available!");
+        resolve("Here are your samosas!");
+      } else {
+        console.log("Samosas are not available!");
+        reject("Sorry, we are out of samosas!");
+      }
+    }, 2000); // Simulate buying samosas (2 seconds)
+  });
+}
+
+buySamosa()
+  .then((message) => console.log(message)) // Promise resolved
+  .catch((error) => console.error(error)); // Promise rejected
+Use code with caution.
+Async/Await:
+
+Ab soch lein aap ek restaurant mein hain aur waiter se samosa aur chai mangte hain. Waiter pehle aapko samosa लाकर deta hai, phir aap samosa kha rahe hain, tab waiter chai लाकर deta hai. Aapko yeh order ("async/await") peshtar hi pata hai ("await").
+
+Yahi async/await ka concept hai. Aap ek function ko bata dete hain ki pehle ek doosre function ka wait kare ("await"), phir aage ka kaam kare.
+
+Example:
+
+JavaScript
+async function orderFood() {
+  console.log("Ordering samosas...");
+  const samosas = await buySamosa();
+  console.log(samosas);
+
+  console.log("Ordering tea...");
+  const tea = await makeTea();
+  console.log(tea);
+}
+
+orderFood();
+Use code with caution.
+Yeh sirf ek chota sa samjhaya hai. Umid karta hoon aapko ab callback functions, promises, aur async/await ki basic samjh aa gayi hogi.

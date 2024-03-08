@@ -1,0 +1,34 @@
+Event Listner in JavaScript
+
+event listner ko ham simple kisi bh event ko perform karwany ka liya use karty hian,
+ yha kuch important event listner hain:\
+
+ "kisi bh event ko use karny ka liya hamy js ma, jis par ham event lagana cahty hain usy select karna hota ha, then phr asy"
+example:
+
+let box = document.querySelector(".box");
+
+box.addEventListner("click", fuction(){
+
+or yha ap wo likhy jo ap isky click hony par perform karwana cahty hain.
+
+})
+
+---------------------------------------------------------------------------*
+
+*) Click  ----> is event ko ham kisi bh click par action perform karny ka liya use karty hian,
+*)mouseover 
+*) contextmenu -----> bht acha event ha, iska use ap asy kar skty hian ka jab koi user mouse par right click kary to ap use simple kuch columns ya right ma dekhay something,  
+*)double click  -----> wasy is event ko use kar k ap apni site ka theme bh chang kar skty hian ka, 
+example: agar user screen par double click kary to simple background color pori site ka change ho jay, or phy ap window object ma simple "click " event lga kar phr sa wohi color laga skty hian; 
+
+*) window objects in js ----> wasy ham jo bh kam karty hian wo ham window objects ma hi karty hain, iska matlab hota haka window ka objects,, example:
+jo bh ham document.addevent listner, querySelector,getElement by id, etc. yah jo bh ham dayty hain yah sab window objects kahlaty hain.
+
+ab agar ap cahty hain  ka ap pori site ma jha jha bh user click kary to usy yah event dikhy to ap simple kisi bh object ki need nh ha ap simply 
+window use karky kam kar skty hian 
+
+addEventListner("contextmenu",function(e){
+   e.preventDefault();  -----> isko ham tab use krty hain jab ham cahty hain ka user cahy  click kary lakin usy koi bh action perfom na ho, ab jasy yha use kiya hato iska matlab haka 
+                                 jab user right click kary ga to usy koi action nexar nh ay ga. isy ham kahi bh use karwa skty hain. 
+})

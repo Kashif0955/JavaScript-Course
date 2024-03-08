@@ -1,0 +1,44 @@
+                    
+                    "Execution Context and Execution Stack"
+
+JavaScript me execution context ya stack ek fundamental concept hai jo code ko execute karne ka tareeqa hai. Har function ka apna execution context hota hai, jo function ke variables, parameters, aur reference ko store karta hai. Execution context stack, ya call stack, ek LIFO (Last In, First Out) data structure hai jo function calls ko track karta hai.
+
+Jab koi function call hota hai, ek naya execution context stack me push hota hai. Jab function ka execution complete hota hai, ya fir ek function dusre function ko call karta hai, to topmost execution context stack se pop ho jata hai.
+
+Execution context me kuch components hote hain:
+
+1. **Variable Environment:** Ye function ke variables, parameters, aur function declarations ko store karta hai.
+2. **Scope Chain:** Ye function ke lexical scope ko define karta hai.
+3. **This Binding:** Ye current object ko reference karta hai.
+
+Execution context ka yeh understanding JavaScript developers ke liye bahut zaroori hai, kyun ki ye behavior ko samajhne me help karta hai, especially nested functions, closures, aur asynchronous programming me. Iske bina, code ki execution aur behavior ko samajhna mushkil ho jata hai.
+
+=============================================
+Chaliye main aapko execution context aur stack ko ek aur tareeqe se samjhaata hoon:
+
+1. **Execution Context:** Ek execution context ek function ke execution ke liye ek environment provide karta hai. Ye environment function ke variables, scope, aur this keyword ko define karta hai.
+
+2. **Call Stack:** Call stack ek data structure hai jo function calls ko track karta hai. Jab koi function call hota hai, ek naya execution context create hota hai aur call stack me push kiya jata hai. Jab function ka execution complete hota hai, ya fir ek function dusre function ko call karta hai, to topmost execution context stack se pop ho jata hai.
+
+Chaliye ek example dekhte hain:
+
+```javascript
+function greet(name) {
+  let message = "Hello, ";
+  console.log(message + name);
+}
+
+function sayHello() {
+  let name = "John";
+  greet(name);
+}
+
+sayHello();
+```
+
+1. `sayHello` function ko call kiya jata hai. Iska execution context create hota hai aur call stack me push kiya jata hai.
+2. Phir `sayHello` function `greet` function ko call karta hai. `greet` function ka execution context create hota hai aur call stack me push kiya jata hai.
+3. Jab `greet` function ka execution complete hota hai, uska execution context call stack se pop ho jata hai.
+4. Jab `sayHello` function ka execution complete hota hai, uska execution context bhi call stack se pop ho jata hai.
+
+Call stack ka yeh behavior function calls ko track karne aur function ke variables ka proper management karne me madad karta hai.

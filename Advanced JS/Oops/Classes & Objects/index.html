@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes and objects</title>
+</head>
+<body>
+
+    <h2>
+
+    </h2>
+    <script>
+
+
+        //Objects
+//objects ko ham js ma har jga use karty hian, objects ko ham values ko store karny ka liuya use karty hain,, 
+//object ki properties dynamic hoti hain, mean ham unhy easily add update delete kar skty hian. chly dekhty hian objects ko ham kasy bnaty hian:
+
+const person = {
+    name : "Malik Kashif",
+    age : 22,
+    city: "Karachi"
+
+}
+console.log(person);
+
+// to ham is trha object create karty hain.
+
+      //Classes
+
+      //class ak blueprint ha jo ka objects ko create karny ma use hota ha.
+      //classes ko ham class keyword sa use karty hain,
+      //classes ko ham is liya bh use karty hain ka ak class ma ham multiple mthods or properties ko use kar skty hian (methods mean:functions,, properties mean:variables):
+      //classes ka zariya ham inheritance kar skty hian: classes ko create karny ka tareeka yah ha;
+
+      class Person{          // class create karty waqt hamy hamesha class ka name ka first letter capital rakhna hota ha jasy ka person ka P
+
+        constructor(name,age,city){  //classes ma ham hamesha koi bh value constructor ka zariya pass karty hain, or phr neechy us value ko ham this. sa call karty hian
+            
+            this.name = name;
+            this.age = age;
+            this.city = city;
+
+        }
+      }
+
+
+const result = new Person("kashif",22,"karachi");
+console.log(result);
+
+
+
+
+    </script>
+</body>
+</html>

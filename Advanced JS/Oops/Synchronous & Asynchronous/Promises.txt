@@ -1,0 +1,15 @@
+                 Promises in Js
+
+JavaScript mein Promises ka istemal asynchronous operations ko behtar tareeqay se handle karne ke liye kiya jata hai. Yahan kuch wajahat hain ke kyun promises aam tor par istemal kiye jate hain:
+
+1. **Asynchronous Operations**: JavaScript single-threaded hai, matlab ek waqt mein sirf ek kaam kar sakta hai. Asynchronous operations, jaise ke server se data fetch karna ya file padhna, doosre code ki execution ko block nahi karte. Promises aise asynchronous operations ko saaf taur par handle karne ka ek tareeqa faraham karte hain.
+
+2. **Callback Hell Se Bachna**: Promises se pehle, callbacks asynchronous operations ko handle karne ka mukhya tareeqa the. Nested callbacks "callback hell" ke roop mein unreadable aur mushkil-e-fahm code ka bais ban sakte hain. Promises ek zyada structured aur padhne mein aasan alternative faraham karte hain callbacks ke muqable mein.
+
+3. **Chaining**: Promises ko `.then()` aur `.catch()` methods ke zariye chain kiya ja sakta hai, jo kay multiple asynchronous operations ko ek ke baad ek sequence mein manage karne ko asaan banata hai. Ye chaining nested callbacks ke muqable mein zyada padhne aur samajhne mein asaan banaati hai.
+
+4. **Error Handling**: Promises asynchronous operations mein errors ko handle karne ka ek mawazna kiya gaya tareeqa faraham karte hain. Aap `.catch()` method ka istemal karke promise chain ke aakhri mein errors ko handle kar sakte hain, jo ke error handling ko zyada seedha aur markazi banata hai.
+
+5. **Composition**: Promises ko various methods jaise `Promise.all()`, `Promise.race()`, aur `Promise.any()` ke zariye milaaya ja sakta hai. Ye methods aapko multiple promises ke saath kaam karne ki ijaazat dete hain, zyada complex asynchronous workflows ko mumkin banate hain.
+
+Mukhtasir tor par, JavaScript mein promises asynchronous operations ko handle karne ka ek saaf aur zyada structured tareeqa faraham karte hain, jo ke code ko zyada padhne aur maintain karne ke liye, mazeed mustaqbil ke liye padhne, maintaain karne aur nisbatan jinsi karta hai. Ye modern asynchronous programming paradigms, jaise ke async/await, ke liye buniyadi bunyadi hain.
