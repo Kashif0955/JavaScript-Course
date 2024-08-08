@@ -41,5 +41,5 @@ switch(pen){
                 default :
                 console.log(" The color of Pen is Random");
                 break;
-
+                
 }

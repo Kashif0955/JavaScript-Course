@@ -19,6 +19,16 @@ Yeh kuch common use cases hain jahan spread operator JavaScript mein istemal hot
    console.log(copiedArray); // Output: [1, 2, 3]
    ```
 
+   copy karna or refrence dyna alag alag ha, ab neechy dekho,
+   const a = [1,2,3,4];
+   const b = [...a];  ---> ab yha many copy kia ha a ki array ko, to wo sari array to mjhy mili ha, or main difference yah haka,jab ma push kar rha ho agar "a" ma to just a ma hi push ho rha ha, b ma nh ho rha ha, agar ma ref karta to dono ma hota, neechy dekho;
+    a.push(5);   
+     console.log(a);
+
+refrence pass karna,
+const a = [1,2,3,4];
+const b = a;  ----> yah many ab ref pass kia ha, ab ma jo bh karo ga a ka sath, or b ma sath bh hoga.
+
 3. **Function Calls**: Spread operator function ke arguments ko pass karne mein istemal hota hai.
    ```javascript
    function sum(a, b, c) {
@@ -38,3 +48,20 @@ Yeh kuch common use cases hain jahan spread operator JavaScript mein istemal hot
    ```
 
 Spread operator ka istemal JavaScript mein flexible aur powerful syntax create karne mein hota hai, jisse code readability aur maintainability improve hoti hai.
+
+Rest operator :
+
+rest operator asal ma jo values back jati hian kisi bh function ma usy ak variable ma dalta ha, example dekho:
+
+function abc (a,b,c){
+console.log(a,b,c)
+};
+abc(1,2,4,4,5,6,7,7,8);   --> abhi iska Output just 1,2,4 ayga, q, q k hamny just a,b,c parameter pass kia hain na, ab agar koi mjhy kahy ka baqi ki jo values hain, usy bh tm store kar k dekhoa kisi variable ma to kasy dekhay gay ao dekhty hian 
+
+
+function abc (a,b,c,...d){
+console.log(a,b,c,d)
+};
+abc(1,2,4,4,5,6,7,7,8); --> ab iska answer yah ay ga  " 1 2 4 [ 4, 5, 6, 7, 7, 8 ] "
+
+this is called rest operator.

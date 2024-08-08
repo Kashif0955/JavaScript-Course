@@ -1,0 +1,44 @@
+All About Arrow Function:
+
+Arrow Function ES6 ma aya ha, or arrow function ka proper name, fat arrow function ha.
+
+arrow function 3 trha ka hoty hian :
+1) fat arrow function basic
+2) fat arrow function with one parameter
+3) fat arrow function with implecit return
+
+
+fat arrow function simple:
+
+()=>{} ---> this is called simple arrow function.
+
+fat arrow function with one parameter:
+
+const a = (b)=>{
+console.log("agya ha");
+}
+
+a(12); --> many yha just a function ko call kia ha, or apko jo yah value 12 nazar arhi ha, wo ak parameter ki value ha, jo many uper pass kia ha, 
+
+Default parameter:
+
+Default parameter ham usy kahty hian k ab jsy many uper ak parameter pass kia "a" ko, agar ma uski jga kuch nh dyta to wo default parameter kahlata, or uski value "undefined"ati
+q k many value define hi kha ki ha, ay example dekhty hain.
+
+function abc(parms=0){   --> parameter ki value 0 karny kok hi ham default parameter kahty hian 
+console.log(parms);
+}
+abc(12); --> ab yah to many parms ma ak value day di ha to, mjhy uski value mily gi, 
+abc();lakin many yha koi value nh di, parms ko to mjy ab yah apni default value dy ga, jo k ha "0".
+
+that's it, isy hi ham default parameter kahty hian.
+
+
+fat arrow function with implecit return:
+
+jo bh function koi value return karta ho, usy ham simple implecit return kahty hian.
+
+var g = ()=> 12;
+console.log(g());   yah hamny simple ak value pass kar di haka, jo bh ho jay tmny just 12 hi return karna ha simple that's it.
+
+

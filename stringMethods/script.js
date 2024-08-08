@@ -51,7 +51,7 @@ let a = "this is malik kashif";
 // ap cahty hain ka 1 chractor sa lay kar 5 chr tak apko pta chly ka ismy kia likha ha to ap wo is string method ka use sa kar skty hain,
 // is method ma simply apko pta chlta haka 1 value sa lay kar 2sri valur tak ap dekhna cahty hian simple
 
-let b = "i am mean stack developer";
+let b = "i am a mean stack developer";
 
 // console.log(b.substring(4,11));
 

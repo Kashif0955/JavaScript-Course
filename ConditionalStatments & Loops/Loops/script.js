@@ -6,7 +6,7 @@
 
 // in sab ko ham different jagho par use karty hian jha zarorat ho.
 
-for(let i = 0; i<10; i++){
+for(let i = 0; i<10; i++){    //yha hamny i<10 liya ha jika matlab haka ham kah rhay hain ka "i 10 sa chota ha is liya i ko 10 tak chlao."
     console.log("Malik Kashif");
 
 }

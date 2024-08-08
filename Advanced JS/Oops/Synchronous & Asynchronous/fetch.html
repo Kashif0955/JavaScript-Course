@@ -1,40 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=\, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
     <title>Fetch keyword in html</title>
-</head>
-<body>
-
-    <h2>
-fetching api in js
-    </h2>
+  </head>
+  <body>
+    <h2>fetching api in js</h2>
 
     <script>
-        const url = "https://api.coindesk.com/v1/bpi/currentprice.json";
-    
+      const url = "https://api.coindesk.com/v1/bpi/currentprice.json";
 
-        const fetchData = ()=>{
+      const fetchData = () => {
+        fetch(url)
+          .then((response) => {
+            console.log(response.json());
+          })
 
-            fetch(url)
-            .then((response)=>{
-               console.log(response.json()) ;
-            })
-        
-         
-            .catch((e)=>{
-                console.log(e);
-            })
-        }
-        fetchData();
+          .catch((e) => {
+            console.log(e);
+          });
+      };
+      fetchData();
 
-        //ham kuch bh khas tor par api fetch karny ka liya hamy fetch() keyword use karna hota ha, or yah ak new concept ha Js ma
-        //phly ham yahi kam ajax ka zariya karty thy,
-
-        
-
+      //ham kuch bh khas tor par api fetch karny ka liya hamy fetch() keyword use karna hota ha, or yah ak new concept ha Js ma
+      //phly ham yahi kam ajax ka zariya karty thy,
     </script>
-    
-</body>
+  </body>
 </html>

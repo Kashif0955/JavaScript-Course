@@ -20,6 +20,7 @@ console.log(b);
 
 console.log(typeof b.toString());   // b number ha par hamny kha haka yah hamy browser ma string dekhay to isny hamy string dekhaya.
 
+// or agar ak number ko ham cahty hian ka string show kary to asy likhy gay:
 
   
 
